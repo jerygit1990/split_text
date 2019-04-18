@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="#eceff1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="2.0dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_chat"
+                android:layout_above="@+id/layout_input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        <LinearLayout
+                android:id="@+id/layout_input"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <View
+                    android:background="#b0bec5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <EditText
+                        android:id="@+id/edt_msg"
+                        android:layout_width="match_parent"
+                        android:layout_toLeftOf="@+id/btn_send_chat"
+                        android:layout_marginRight="10dp"
+                        android:minHeight="48dp"
+                        android:maxLines="3"
+                        android:background="@null"
+                        android:layout_height="wrap_content"/>
+
+                <android.support.design.button.MaterialButton
+                        android:id="@+id/btn_send_chat"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:enabled="false"
+                        android:layoutDirection="rtl"
+                        android:layout_centerVertical="true"
+                        style="@style/IconOnlyButton"
+                        app:icon="@drawable/ic_send_normal"
+                        android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
