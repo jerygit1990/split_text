@@ -23,13 +23,13 @@ public class MyClass {
 
         long time = System.currentTimeMillis();
         List<String> rs = splitMsg(reduceMaxChar(MAX_CHAR), text);
+        long delta = System.currentTimeMillis() - time;
+        System.out.println("time: " + delta);
 
         for(String t : rs) {
             System.out.println(t);
         }
 
-        long delta = System.currentTimeMillis() - time;
-        System.out.println("time: " + delta);
     }
 
     /**
