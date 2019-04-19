@@ -74,6 +74,8 @@ class ChatUtils {
                 } else {
                     sentences += tWord
                 }
+
+                // when finish loop, check if has 'sentences' we will add to result list
                 if (i == words.size - 1 && sentences.isNotEmpty()) {
                     rs.add(sentences)
                 }

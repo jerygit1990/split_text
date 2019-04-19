@@ -69,14 +69,20 @@ class ChatActivity : AppCompatActivity(), IChatView {
         }
     }
 
+    private fun scrollToBottomChat() {
+        rv_chat.layoutManager?.scrollToPosition(msgList.size - 1)
+    }
+
     override fun updateChat(msg: ChatBaseItem<Any>) {
         msgList.add(msg)
         chatAdapter?.notifyDataSetChanged()
+        scrollToBottomChat()
     }
 
     override fun updateChat(msgs: List<ChatBaseItem<Any>>) {
         msgList.addAll(msgs)
         chatAdapter?.notifyDataSetChanged()
+        scrollToBottomChat()
     }
 
     override fun onInputInvalid(errMsg: String) {

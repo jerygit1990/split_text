@@ -26,6 +26,4 @@ class ChatTextItem(time : Long, content : String) : ChatBaseItem<String>(TYPE_TE
             return null
         }
     }
-
-
 }

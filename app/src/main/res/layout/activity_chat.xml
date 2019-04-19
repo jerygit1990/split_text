@@ -43,6 +43,8 @@
                         android:id="@+id/edt_msg"
                         android:layout_width="match_parent"
                         android:layout_toLeftOf="@+id/btn_send_chat"
+                        android:hint="Say something..."
+                        android:paddingLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:minHeight="48dp"
                         android:maxLines="3"
